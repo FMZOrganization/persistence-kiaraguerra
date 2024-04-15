@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <FrameLayout
+        android:id="@+id/view_color"
+        android:layout_width="match_parent"
+        android:layout_height="361dp"
+        android:background="#000000"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="392dp"
+        android:layout_height="77dp"
+        android:layout_marginBottom="4dp"
+        android:text="@string/reset"
+        android:backgroundTint="@color/pink"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/seekBlue" />
+
+    <SeekBar
+        android:id="@+id/seekRed"
+        android:layout_width="404dp"
+        android:layout_height="37dp"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.506"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout3" />
+
+    <SeekBar
+        android:id="@+id/seekBlue"
+        android:layout_width="401dp"
+        android:layout_height="47dp"
+        app:layout_constraintBottom_toTopOf="@+id/button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout5" />
+
+    <SeekBar
+        android:id="@+id/seekGreen"
+        android:layout_width="403dp"
+        android:layout_height="48dp"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout4" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout3"
+        android:layout_width="389dp"
+        android:layout_height="57dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/seekRed"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view_color">
+
+        <Switch
+            android:id="@+id/switchRed"
+            android:layout_width="175dp"
+            android:layout_height="43dp"
+            android:text="@string/remove"
+            android:thumbTint="@color/red"/>
+
+
+
+        <TextView
+            android:id="@+id/la_0"
+            android:layout_width="96dp"
+            android:layout_height="41dp"
+            android:layout_weight="1"
+            android:text="@string/textview" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout4"
+        android:layout_width="388dp"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/seekGreen"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/seekRed">
+
+        <Switch
+            android:id="@+id/switchGreen"
+            android:layout_width="169dp"
+            android:layout_height="match_parent"
+            android:text="@string/remove"
+            android:thumbTint="@color/green" />
+
+        <TextView
+            android:id="@+id/la_1"
+            android:layout_width="201dp"
+            android:layout_height="38dp"
+            android:layout_weight="1"
+            android:text="@string/textview" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout5"
+        android:layout_width="375dp"
+        android:layout_height="45dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/seekBlue"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/seekGreen">
+
+        <Switch
+            android:id="@+id/switchBlue"
+            android:layout_width="175dp"
+            android:layout_height="71dp"
+            android:text="@string/remove"
+            android:thumbTint="@color/blue"/>
+
+        <TextView
+            android:id="@+id/la_2"
+            android:layout_width="142dp"
+            android:layout_height="44dp"
+            android:layout_weight="1"
+            android:text="@string/textview" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
