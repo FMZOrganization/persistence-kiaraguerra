@@ -27,40 +27,33 @@ class MainActivity : AppCompatActivity() {
     private fun setupUI() {
         updateColor()
 
-        // Red
-        val redSeekBar = findViewById<SeekBar>(R.id.seekRed)
+         val redSeekBar = findViewById<SeekBar>(R.id.seekRed)
         redSeekBar.setOnSeekBarChangeListener(getSeekBarChangeListener(0))
 
-        // Green
-        val greenSeekBar = findViewById<SeekBar>(R.id.seekGreen)
+         val greenSeekBar = findViewById<SeekBar>(R.id.seekGreen)
         greenSeekBar.setOnSeekBarChangeListener(getSeekBarChangeListener(1))
 
-        // Blue
-        val blueSeekBar = findViewById<SeekBar>(R.id.seekBlue)
+         val blueSeekBar = findViewById<SeekBar>(R.id.seekBlue)
         blueSeekBar.setOnSeekBarChangeListener(getSeekBarChangeListener(2))
 
-        // Reset
-        val resetButton = findViewById<Button>(R.id.button)
+         val resetButton = findViewById<Button>(R.id.button)
         resetButton.setOnClickListener {
             viewModel.resetColor()
         }
 
-        // Red
-        val redSwitch = findViewById<Switch>(R.id.switchRed)
+         val redSwitch = findViewById<Switch>(R.id.switchRed)
         redSwitch.setOnCheckedChangeListener { _, isChecked ->
             findViewById<SeekBar>(R.id.seekRed).isEnabled = isChecked
             viewModel.updateRedValue(if (isChecked) redSeekBar.progress / 100f else 0f)
         }
 
-        // Green
-        val greenSwitch = findViewById<Switch>(R.id.switchGreen)
+         val greenSwitch = findViewById<Switch>(R.id.switchGreen)
         greenSwitch.setOnCheckedChangeListener { _, isChecked ->
             findViewById<SeekBar>(R.id.seekGreen).isEnabled = isChecked
             viewModel.updateGreenValue(if (isChecked) greenSeekBar.progress / 100f else 0f)
         }
 
-        // Blue
-        val blueSwitch = findViewById<Switch>(R.id.switchBlue)
+         val blueSwitch = findViewById<Switch>(R.id.switchBlue)
         blueSwitch.setOnCheckedChangeListener { _, isChecked ->
             findViewById<SeekBar>(R.id.seekBlue).isEnabled = isChecked
             viewModel.updateBlueValue(if (isChecked) blueSeekBar.progress / 100f else 0f)
